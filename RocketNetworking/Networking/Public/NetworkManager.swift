@@ -9,6 +9,7 @@
 import Foundation
 
 public final class RocketNetworkManager<RocketApi: EndPointType> {
+    
     // MARK: - Properties
     public var environment: NetworkEnvironment {
         return rocketEnvironment ?? .development
