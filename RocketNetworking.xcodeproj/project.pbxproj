@@ -24,7 +24,7 @@
 		D23FE9BD21FCEDD700EC0EB5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */; };
 		D23FE9BF21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BE21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift */; };
 		D23FE9C121FCEE7E00EC0EB5 /* NetworkResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */; };
-		D23FE9C621FCEEE300EC0EB5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C521FCEEE300EC0EB5 /* Result.swift */; };
+		D23FE9C621FCEEE300EC0EB5 /* RKResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		D23FE9BE21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyLoopable+Extension.swift"; sourceTree = "<group>"; };
 		D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseResult.swift; sourceTree = "<group>"; };
-		D23FE9C521FCEEE300EC0EB5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 		D23FE9BB21FCE50000EC0EB5 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				D23FE9C521FCEEE300EC0EB5 /* Result.swift */,
+				D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */,
 				D23FE9A321FCD94F00EC0EB5 /* PropertyLoopable.swift */,
 				D23FE9A521FCD94F00EC0EB5 /* NetworkManager.swift */,
 				D23FE9A821FCD94F00EC0EB5 /* Endpoint.swift */,
@@ -285,7 +285,7 @@
 				D23FE9B521FCD94F00EC0EB5 /* NetworkRouter.swift in Sources */,
 				D23FE9B621FCD94F00EC0EB5 /* HTTPTask.swift in Sources */,
 				D23FE9BA21FCDAC600EC0EB5 /* NetworkEnvironment.swift in Sources */,
-				D23FE9C621FCEEE300EC0EB5 /* Result.swift in Sources */,
+				D23FE9C621FCEEE300EC0EB5 /* RKResult.swift in Sources */,
 				D23FE9BD21FCEDD700EC0EB5 /* APIError.swift in Sources */,
 				D23FE9B121FCD94F00EC0EB5 /* PropertyLoopable.swift in Sources */,
 				D23FE9C121FCEE7E00EC0EB5 /* NetworkResponseResult.swift in Sources */,

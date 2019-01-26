@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Result<T,U> {
+public enum RKResult<T,U> {
     case success(T)
     case error(U)
 }

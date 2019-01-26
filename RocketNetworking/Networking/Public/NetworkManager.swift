@@ -39,7 +39,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
      - decodingType: The type to decode.
      - completion: The Result enum allows for a switch statement to be used when the method is called.
      */
-    public func request<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: T.Type, completion: @escaping (Result<T, APIError>) -> Void) {
+    public func request<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: T.Type, completion: @escaping (RKResult<T, APIError>) -> Void) {
         router.request(apiEndpoint) { data, response, error in
             if error != nil {
                 completion(.error(.requestFailed))
@@ -81,7 +81,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
      - decodingType: The type to decode.
      - completion: The Result enum allows for a switch statement to be used when the method is called.
      */
-    public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (Result<[T], APIError>) -> Void) {
+    public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (RKResult<[T], APIError>) -> Void) {
         //gets data based on url...
         router.request(apiEndpoint) { data, response, error in
             if error != nil {
