@@ -3,7 +3,7 @@
 //  RocketNetworking
 //
 //  Created by William Brandin on 1/26/19.
-//  Copyright © 2018 William Brandin. All rights reserved.
+//  Copyright © 2019 William Brandin. All rights reserved.
 //
 
 import Foundation
@@ -12,15 +12,11 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
     
     private var task: URLSessionTask?
     
-    private var routeURL: String = ""
-    private var routeHeaders: [String: String] = [:]
-    private var routeBodyData: String = ""
-    
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
             let request = try buildRequest(from: route)
-            buildRequestDescription(request)
+            buildPrintableRequestDescription(request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
             })
@@ -79,9 +75,10 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
     }
     
     
-    private func buildRequestDescription(_ request: URLRequest) {
-        routeURL = request.url?.absoluteString ?? ""
-        routeHeaders = request.allHTTPHeaderFields ?? [:]
+    private func buildPrintableRequestDescription(_ request: URLRequest) {
+        let routeURL = request.url?.absoluteString ?? ""
+        let routeHeaders = request.allHTTPHeaderFields ?? [:]
+        var routeBodyData = ""
         if let bodyData = request.httpBody {
             routeBodyData = String(data: bodyData, encoding: String.Encoding.utf8) ?? ""
         }

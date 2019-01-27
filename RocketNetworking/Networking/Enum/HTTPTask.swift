@@ -3,7 +3,7 @@
 //  RocketNetworking
 //
 //  Created by William Brandin on 1/26/19.
-//  Copyright © 2018 William Brandin. All rights reserved.
+//  Copyright © 2019 William Brandin. All rights reserved.
 //
 
 import Foundation
