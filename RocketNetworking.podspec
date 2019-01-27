@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RocketNetworking"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Lightweight Networking in pure swift"
   s.description  = "Lightweight Protocol oriented networking layer written in swift."
   s.homepage     = "https://www.universitylaundry.com"
