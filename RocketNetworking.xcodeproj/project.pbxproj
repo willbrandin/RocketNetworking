@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D23FE98E21FCD91800EC0EB5 /* RocketNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FE98421FCD91800EC0EB5 /* RocketNetworking.framework */; };
 		D23FE99321FCD91800EC0EB5 /* RocketNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE99221FCD91800EC0EB5 /* RocketNetworkingTests.swift */; };
 		D23FE99521FCD91800EC0EB5 /* RocketNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D23FE98721FCD91800EC0EB5 /* RocketNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D23FE9AE21FCD94F00EC0EB5 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A021FCD94F00EC0EB5 /* ParameterEncoding.swift */; };
@@ -25,6 +24,7 @@
 		D23FE9BF21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BE21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift */; };
 		D23FE9C121FCEE7E00EC0EB5 /* NetworkResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */; };
 		D23FE9C621FCEEE300EC0EB5 /* RKResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */; };
+		D25BD81A21FE14FD005217B9 /* RocketNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FE98421FCD91800EC0EB5 /* RocketNetworking.framework */; };
 		D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */; };
 		D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428E21FD2EE50044AB62 /* RKTestModel.swift */; };
 /* End PBXBuildFile section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23FE98E21FCD91800EC0EB5 /* RocketNetworking.framework in Frameworks */,
+				D25BD81A21FE14FD005217B9 /* RocketNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 				D23FE98D21FCD91800EC0EB5 /* RocketNetworkingTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		D23FE98621FCD91800EC0EB5 /* RocketNetworking */ = {
 			isa = PBXGroup;
