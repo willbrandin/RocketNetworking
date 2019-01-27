@@ -10,7 +10,9 @@ import Foundation
 
 internal struct URLParameterEncoder: ParameterEncoder {
     internal static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        guard let url = urlRequest.url else { throw APIError.requestFailed }
+        guard let url = urlRequest.url else {
+            throw APIError.requestFailed
+        }
         
         if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false), !parameters.isEmpty {
             urlComponents.queryItems = [URLQueryItem]()

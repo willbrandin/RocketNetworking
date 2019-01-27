@@ -57,7 +57,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                     do {
                         //Decodes the data
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
-                        print("********************************************\n\(apiResonse)\n********************************************")
+                        print("********************************************\n\(self.jsonToString(data: responseData))\n********************************************")
                         completion(.success(apiResonse))
                     } catch {
                         completion(.error(.jsonParsingFailure))
@@ -112,12 +112,19 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
         }
     }
     
+    public func cancelRequest() {
+        router.cancel()
+    }
+    
     // MARK: - Private Methods
-    private func handleNetworkResponse(_ response: HTTPURLResponse) -> NetworkResponseResult<String>{
+    private func handleNetworkResponse(_ response: HTTPURLResponse) -> NetworkResponseResult{
         switch response.statusCode {
         case 200...299: return .success
         default: return .failure
         }
     }
     
+    private func jsonToString(data: Data) -> String {
+        return String(data: data, encoding: String.Encoding.utf8) ?? ""
+    }
 }
