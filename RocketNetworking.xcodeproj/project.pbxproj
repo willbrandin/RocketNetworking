@@ -100,7 +100,8 @@
 				D23FE98D21FCD91800EC0EB5 /* RocketNetworkingTests.xctest */,
 			);
 			name = Products;
-			sourceTree = SOURCE_ROOT;
+			path = ../../../../../../../../../Users/willbrandin/RocketNetworking;
+			sourceTree = SDKROOT;
 		};
 		D23FE98621FCD91800EC0EB5 /* RocketNetworking */ = {
 			isa = PBXGroup;
