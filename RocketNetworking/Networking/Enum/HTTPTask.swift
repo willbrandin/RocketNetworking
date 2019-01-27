@@ -1,9 +1,9 @@
 //
 //  HTTPTask.swift
-//  SchoolConnectOnBoarding
+//  RocketNetworking
 //
-//  Created by William Brandin on 4/9/18.
-//  Copyright © 2018 William Brandin. All rights reserved.
+//  Created by William Brandin on 1/26/19.
+//  Copyright © 2019 William Brandin. All rights reserved.
 //
 
 import Foundation

@@ -1,16 +1,18 @@
 //
 //  URLParameterEncoder.swift
-//  SchoolConnectOnBoarding
+//  RocketNetworking
 //
-//  Created by William Brandin on 4/9/18.
-//  Copyright © 2018 William Brandin. All rights reserved.
+//  Created by William Brandin on 1/26/19.
+//  Copyright © 2019 William Brandin. All rights reserved.
 //
 
 import Foundation
 
 internal struct URLParameterEncoder: ParameterEncoder {
     internal static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        guard let url = urlRequest.url else { throw APIError.requestFailed }
+        guard let url = urlRequest.url else {
+            throw APIError.requestFailed
+        }
         
         if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false), !parameters.isEmpty {
             urlComponents.queryItems = [URLQueryItem]()

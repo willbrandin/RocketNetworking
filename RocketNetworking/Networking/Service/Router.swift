@@ -1,21 +1,22 @@
 //
 //  Router.swift
-//  SchoolConnectOnBoarding
+//  RocketNetworking
 //
-//  Created by William Brandin on 4/9/18.
-//  Copyright © 2018 William Brandin. All rights reserved.
+//  Created by William Brandin on 1/26/19.
+//  Copyright © 2019 William Brandin. All rights reserved.
 //
 
 import Foundation
 
-class Router<EndPoint: EndPointType>: NetworkRouter {
+internal final class Router<EndPoint: EndPointType>: NetworkRouter {
     
     private var task: URLSessionTask?
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
-            let request = try self.buildRequest(from: route)
+            let request = try buildRequest(from: route)
+            buildPrintableRequestDescription(request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
             })
@@ -39,19 +40,20 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
                 request.setValue("application/json", forHTTPHeaderField: "Content-type")
                 
             case .requestParameters(let bodyParams, let urlParams):
-                try self.configureParameters(bodyParameters: bodyParams, urlParameters: urlParams, request: &request)
+                try configureParameters(bodyParameters: bodyParams, urlParameters: urlParams, request: &request)
                 
             case .requestParametersAndHeaders(let bodyParams, let urlParams, let additionalHeaders):
                 self.additionalHeaders(additionalHeaders, request: &request)
-                try self.configureParameters(bodyParameters: bodyParams, urlParameters: urlParams, request: &request)
+                try configureParameters(bodyParameters: bodyParams, urlParameters: urlParams, request: &request)
             }
+            
             return request
         } catch  {
             throw error
         }
     }
     
-    fileprivate func configureParameters(bodyParameters: PropertyLoopable?, urlParameters: Parameters?, request: inout URLRequest) throws {
+    private func configureParameters(bodyParameters: PropertyLoopable?, urlParameters: Parameters?, request: inout URLRequest) throws {
         do {
             if let bodyParameters = bodyParameters {
                 let parameters = try bodyParameters.allProperties()
@@ -65,11 +67,23 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
-    fileprivate func additionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest){
+    private func additionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest){
         guard let headers = additionalHeaders else { return }
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
+    }
+    
+    
+    private func buildPrintableRequestDescription(_ request: URLRequest) {
+        let routeURL = request.url?.absoluteString ?? ""
+        let routeHeaders = request.allHTTPHeaderFields ?? [:]
+        var routeBodyData = ""
+        if let bodyData = request.httpBody {
+            routeBodyData = String(data: bodyData, encoding: String.Encoding.utf8) ?? ""
+        }
+        
+        print("\n======================= Start of Service Request call data ==================== \n=======================REQUEST======================= \n URL:\n \(routeURL)\nHEADER:\n\(routeHeaders)\n Body:\n\(routeBodyData)\n\n======================= End of  Service Request call data ================= \n\n\n")
     }
     
 }
