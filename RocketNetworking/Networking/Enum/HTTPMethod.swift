@@ -1,8 +1,8 @@
 //
 //  HTTPMethod.swift
-//  SchoolConnectOnBoarding
+//  RocketNetworking
 //
-//  Created by William Brandin on 4/9/18.
+//  Created by William Brandin on 1/26/19.
 //  Copyright © 2018 William Brandin. All rights reserved.
 //
 

@@ -1,8 +1,8 @@
 //
 //  NetworkManager.swift
-//  SchoolConnectOnBoarding
+//  RocketNetworking
 //
-//  Created by William Brandin on 4/9/18.
+//  Created by William Brandin on 1/26/19.
 //  Copyright © 2018 William Brandin. All rights reserved.
 //
 
@@ -35,10 +35,10 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
      - important:
      DecodingType must conform to Codable
      
-     - parameters:
-     - apiEndpoint: Endpoint of the request.
-     - decodingType: The type to decode.
-     - completion: The Result enum allows for a switch statement to be used when the method is called.
+     - Parameters:
+        - apiEndpoint: Endpoint of the request.
+        - decodingType: The type to decode.
+        - completion: The Result enum allows for a switch statement to be used when the method is called.
      */
     public func request<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: T.Type, completion: @escaping (RKResult<T, APIError>) -> Void) {
         router.request(apiEndpoint) { data, response, error in
@@ -74,13 +74,15 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
     /**
      Submits a request for the specified `Endpoint` provided.
      Request should send back a list of JSON objects which can be decoded to the `Codable` type provided.
-     - important:
+     - Important:
      DecodingType must be [Codable]
      
-     - parameters:
-     - apiEndpoint: Endpoint of the request.
-     - decodingType: The type to decode.
-     - completion: The Result enum allows for a switch statement to be used when the method is called.
+     
+     - Parameters:
+        - apiEndpoint: Endpoint of the request.
+        - decodingType: The type to decode.
+        - completion: The Result enum allows for a switch statement to be used when the method is called.
+     
      */
     public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (RKResult<[T], APIError>) -> Void) {
         //gets data based on url...
