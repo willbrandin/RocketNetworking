@@ -1,6 +1,6 @@
 
 # Rocket Networking 🚀
-Lightweight protocol oriented Networking
+Lightweight Protocol-Oriented Networking layer.
 
 ## Installation
 
@@ -35,6 +35,7 @@ $ pod install
 
 #### Define Endpoints
 A type that conforms to `EndPointType` defines the http request to be used in the Router.
+All Objects to be encoded **must conform** to `PropertyLoopable`. Conformance allows object properties to be created as a Dictionary. This allows the `HTTPRequest` to encode as Body Data in the form of JSON or as urlParameters.
 
 ```swift
 enum MyAPIEndpoint {
