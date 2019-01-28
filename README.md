@@ -38,8 +38,8 @@ A type that conforms to `EndPointType` defines the http request to be used in th
 
 ```swift
 enum MyAPIEndpoint {
- case getMyEndpoint(id: Int)
- case submitForm(data: MyPropertyLoopableObject)
+    case getMyEndpoint(id: Int)
+    case submitForm(data: MyPropertyLoopableObject)
 }
 ```
 
@@ -50,7 +50,7 @@ enum MyAPIEndpoint {
 extension MyAPIEndpoint: EndPointType {
 
   var environmentBaseURL: String {
-      return "http://stg.schoolconnected.net/api"
+      return "http://staging.my-api-url.net/api"
   }
 
   var baseURL: URL {
@@ -96,21 +96,40 @@ extension MyAPIEndpoint: EndPointType {
 </details>
 
 #### Instance of RocketNetworkManager
-You can create a singleton.
+
 ```swift
 struct NetworkManager {
-  static let sharedInstance = RocketNetworkManager<MyAPIEndpoint>()
+    static let sharedInstance = RocketNetworkManager<MyAPIEndpoint>()
 
-  static func setEnvironment(for environment: NetworkEnvironment) {
-      NetworkManager.sharedInstance.setupNetworkLayer(in: environment)
-  }
+    static func setEnvironment(for environment: NetworkEnvironment) {
+        NetworkManager.sharedInstance.setupNetworkLayer(in: environment)
+    }
 }
 ```
-In `AppDelegate`
+Configure in `AppDelegate`
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-  NetworkManger.sharedInstance.setEnvironment(for: .development)
-  return true
+    NetworkManger.sharedInstance.setEnvironment(for: .development)
+    return true
 }
+```
+
+### Use
+
+```swift
+var myNetworkObject: MyObject? // MyObject must conform to Codable
+let networkManager = NetworkManager.sharedInstance
+let endpoint = MyAPIEndpoint.getMyEndpoint(id: 0)
+
+networkManager.request(for: endpoint, MyObject.self) { result in
+    switch result {
+    case .success(let httpBodyData):
+        print("Data Received 🚀")
+        myNetworkObject = httpBodyData
+    case .error(let error):
+        print(error.localizedDescription)
+    }
+}
+
 ```
