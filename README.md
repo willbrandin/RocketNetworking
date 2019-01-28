@@ -116,7 +116,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 }
 ```
 
-### Use
+## Use
 
 ```swift
 var myNetworkObject: MyObject? // MyObject must conform to Codable
