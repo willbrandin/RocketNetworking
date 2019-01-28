@@ -45,6 +45,7 @@ enum MyAPIEndpoint {
 
 <details>
 <summary>Conform to EndpointType</summary>
+
 ```swift
 extension MyAPIEndpoint: EndPointType {
 
