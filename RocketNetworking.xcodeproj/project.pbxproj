@@ -27,6 +27,7 @@
 		D25BD81A21FE14FD005217B9 /* RocketNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FE98421FCD91800EC0EB5 /* RocketNetworking.framework */; };
 		D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */; };
 		D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428E21FD2EE50044AB62 /* RKTestModel.swift */; };
+		D2A7DCC62318714700150A98 /* RocketWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A7DCC42318714700150A98 /* RocketWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 		D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKResult.swift; sourceTree = "<group>"; };
 		D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTestEndpoint.swift; sourceTree = "<group>"; };
 		D274428E21FD2EE50044AB62 /* RKTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTestModel.swift; sourceTree = "<group>"; };
+		D2A7DCC22318714700150A98 /* RocketWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A7DCC42318714700150A98 /* RocketWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketWatch.h; sourceTree = "<group>"; };
+		D2A7DCC52318714700150A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2A7DCBF2318714700150A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +100,7 @@
 			children = (
 				D23FE98621FCD91800EC0EB5 /* RocketNetworking */,
 				D23FE99121FCD91800EC0EB5 /* RocketNetworkingTests */,
+				D2A7DCC32318714700150A98 /* RocketWatch */,
 				D23FE98521FCD91800EC0EB5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +110,7 @@
 			children = (
 				D23FE98421FCD91800EC0EB5 /* RocketNetworking.framework */,
 				D23FE98D21FCD91800EC0EB5 /* RocketNetworkingTests.xctest */,
+				D2A7DCC22318714700150A98 /* RocketWatch.framework */,
 			);
 			name = Products;
 			path = ../../../../../../../../../Users/willbrandin/RocketNetworking;
@@ -194,6 +207,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		D2A7DCC32318714700150A98 /* RocketWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7DCC42318714700150A98 /* RocketWatch.h */,
+				D2A7DCC52318714700150A98 /* Info.plist */,
+			);
+			path = RocketWatch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -202,6 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23FE99521FCD91800EC0EB5 /* RocketNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2A7DCBD2318714700150A98 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A7DCC62318714700150A98 /* RocketWatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +274,24 @@
 			productReference = D23FE98D21FCD91800EC0EB5 /* RocketNetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D2A7DCC12318714700150A98 /* RocketWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2A7DCC92318714700150A98 /* Build configuration list for PBXNativeTarget "RocketWatch" */;
+			buildPhases = (
+				D2A7DCBD2318714700150A98 /* Headers */,
+				D2A7DCBE2318714700150A98 /* Sources */,
+				D2A7DCBF2318714700150A98 /* Frameworks */,
+				D2A7DCC02318714700150A98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RocketWatch;
+			productName = RocketWatch;
+			productReference = D2A7DCC22318714700150A98 /* RocketWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,6 +307,9 @@
 					};
 					D23FE98C21FCD91800EC0EB5 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					D2A7DCC12318714700150A98 = {
+						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
@@ -276,6 +327,7 @@
 			targets = (
 				D23FE98321FCD91800EC0EB5 /* RocketNetworking */,
 				D23FE98C21FCD91800EC0EB5 /* RocketNetworkingTests */,
+				D2A7DCC12318714700150A98 /* RocketWatch */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +341,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D23FE98B21FCD91800EC0EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2A7DCC02318714700150A98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,6 +386,13 @@
 				D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */,
 				D23FE99321FCD91800EC0EB5 /* RocketNetworkingTests.swift in Sources */,
 				D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2A7DCBE2318714700150A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +619,60 @@
 			};
 			name = Release;
 		};
+		D2A7DCC72318714700150A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RocketWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.RocketWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D2A7DCC82318714700150A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RocketWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.RocketWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +699,15 @@
 			buildConfigurations = (
 				D23FE99C21FCD91800EC0EB5 /* Debug */,
 				D23FE99D21FCD91800EC0EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2A7DCC92318714700150A98 /* Build configuration list for PBXNativeTarget "RocketWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2A7DCC72318714700150A98 /* Debug */,
+				D2A7DCC82318714700150A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
