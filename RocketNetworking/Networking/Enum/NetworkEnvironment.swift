@@ -8,10 +8,10 @@
 
 import Foundation
 
-public enum NetworkEnvironment {
-    case qa
-    case production
-    case staging
-    case development
-    case local
+public enum NetworkEnvironment: Int {
+    case qa = 2
+    case production = 4
+    case staging = 3
+    case development = 1
+    case local = 0
 }
