@@ -28,6 +28,21 @@
 		D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */; };
 		D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428E21FD2EE50044AB62 /* RKTestModel.swift */; };
 		D2A7DCC62318714700150A98 /* RocketWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A7DCC42318714700150A98 /* RocketWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2A7DCE12318724A00150A98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A521FCD94F00EC0EB5 /* NetworkManager.swift */; };
+		D2A7DCE22318724D00150A98 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A821FCD94F00EC0EB5 /* Endpoint.swift */; };
+		D2A7DCE32318724D00150A98 /* PropertyLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A321FCD94F00EC0EB5 /* PropertyLoopable.swift */; };
+		D2A7DCE42318724D00150A98 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A021FCD94F00EC0EB5 /* ParameterEncoding.swift */; };
+		D2A7DCE52318724D00150A98 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AA21FCD94F00EC0EB5 /* NetworkRouter.swift */; };
+		D2A7DCE62318725000150A98 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */; };
+		D2A7DCE72318725000150A98 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9B921FCDAC600EC0EB5 /* NetworkEnvironment.swift */; };
+		D2A7DCE82318725000150A98 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AB21FCD94F00EC0EB5 /* HTTPTask.swift */; };
+		D2A7DCE92318725000150A98 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AC21FCD94F00EC0EB5 /* HTTPMethod.swift */; };
+		D2A7DCEA2318725000150A98 /* NetworkResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */; };
+		D2A7DCEB2318725000150A98 /* RKResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C521FCEEE300EC0EB5 /* RKResult.swift */; };
+		D2A7DCEC2318725500150A98 /* PropertyLoopable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BE21FCEE4E00EC0EB5 /* PropertyLoopable+Extension.swift */; };
+		D2A7DCED2318725500150A98 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A121FCD94F00EC0EB5 /* URLParameterEncoder.swift */; };
+		D2A7DCEE2318725500150A98 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A221FCD94F00EC0EB5 /* JSONParameterEncoder.swift */; };
+		D2A7DCEF2318725500150A98 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AD21FCD94F00EC0EB5 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +408,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A7DCE22318724D00150A98 /* Endpoint.swift in Sources */,
+				D2A7DCE32318724D00150A98 /* PropertyLoopable.swift in Sources */,
+				D2A7DCE52318724D00150A98 /* NetworkRouter.swift in Sources */,
+				D2A7DCE72318725000150A98 /* NetworkEnvironment.swift in Sources */,
+				D2A7DCEC2318725500150A98 /* PropertyLoopable+Extension.swift in Sources */,
+				D2A7DCE82318725000150A98 /* HTTPTask.swift in Sources */,
+				D2A7DCE92318725000150A98 /* HTTPMethod.swift in Sources */,
+				D2A7DCEF2318725500150A98 /* Router.swift in Sources */,
+				D2A7DCEA2318725000150A98 /* NetworkResponseResult.swift in Sources */,
+				D2A7DCED2318725500150A98 /* URLParameterEncoder.swift in Sources */,
+				D2A7DCE42318724D00150A98 /* ParameterEncoding.swift in Sources */,
+				D2A7DCE12318724A00150A98 /* NetworkManager.swift in Sources */,
+				D2A7DCE62318725000150A98 /* APIError.swift in Sources */,
+				D2A7DCEE2318725500150A98 /* JSONParameterEncoder.swift in Sources */,
+				D2A7DCEB2318725000150A98 /* RKResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
