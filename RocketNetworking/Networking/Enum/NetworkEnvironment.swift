@@ -13,4 +13,5 @@ public enum NetworkEnvironment {
     case production
     case staging
     case development
+    case local
 }
