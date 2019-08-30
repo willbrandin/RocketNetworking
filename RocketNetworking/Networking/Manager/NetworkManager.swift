@@ -69,6 +69,8 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
             }
             
             if let response = response as? HTTPURLResponse {
+                self.buildPrintableResponseDescription(response, data)
+                
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .success:
@@ -79,9 +81,9 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                     do {
                         //Decodes the data
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
-                        print("********************************************\n\(self.jsonToString(data: responseData))\n********************************************")
                         completion(.success(apiResonse))
-                    } catch {
+                    } catch(let error) {
+                        print(error.localizedDescription)
                         completion(.error(.jsonParsingFailure))
                     }
                     
@@ -118,6 +120,8 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
             }
             
             if let response = response as? HTTPURLResponse {
+                self.buildPrintableResponseDescription(response, data)
+
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .success:
@@ -127,7 +131,6 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                     }
                     do {
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
-                        print("********************************************\n\(apiResonse)\n********************************************")
                         completion(.success(apiResonse))
                     } catch {
                         completion(.error(.jsonParsingFailure))
@@ -145,6 +148,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
     }
     
     // MARK: - Private Methods
+    
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> NetworkResponseResult{
         switch response.statusCode {
         case 200...299: return .success
@@ -154,5 +158,15 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
     
     private func jsonToString(data: Data) -> String {
         return String(data: data, encoding: String.Encoding.utf8) ?? ""
+    }
+    
+    private func buildPrintableResponseDescription(_ response: HTTPURLResponse, _ data: Data?) {
+        let routeURL = response.url?.absoluteString ?? ""
+        var routeBodyData = ""
+        if let bodyData = data {
+            routeBodyData = String(data: bodyData, encoding: String.Encoding.utf8) ?? ""
+        }
+        
+        print("\n======================= Start of Response call data ==================== \n=======================RESPONSE======================= \n URL:\n \(routeURL)\n Body:\n\(routeBodyData)\n\n======================= End of RESPONSE call data ================= \n\n\n")
     }
 }
