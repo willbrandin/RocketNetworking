@@ -62,10 +62,10 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
         - decodingType: The type that is decoded from the response.
         - completion: RKResult.success is the decodingType passed as an argument.
      */
-    public func request<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: T.Type, completion: @escaping (RKResult<T, APIError>) -> Void) {
+    public func request<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: T.Type, completion: @escaping (Result<T, APIError>) -> Void) {
         router.request(apiEndpoint) { data, response, error in
             if error != nil {
-                completion(.error(.requestFailed))
+                completion(.failure(.requestFailed))
             }
             
             if let response = response as? HTTPURLResponse {
@@ -75,7 +75,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(.error(.invalidData))
+                        completion(.failure(.invalidData))
                         return
                     }
                     do {
@@ -84,11 +84,11 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                         completion(.success(apiResonse))
                     } catch(let error) {
                         print(error.localizedDescription)
-                        completion(.error(.jsonParsingFailure))
+                        completion(.failure(.jsonParsingFailure))
                     }
                     
                 case .failure:
-                    completion(.error(.responseUnsuccessful))
+                    completion(.failure(.responseUnsuccessful))
                 }
             }
             
@@ -112,11 +112,11 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
          - decodingType: The type that is decoded from the response.
          - completion: RKResult.success is the decodingType passed as an argument.
      */
-    public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (RKResult<[T], APIError>) -> Void) {
+    public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (Result<[T], APIError>) -> Void) {
         //gets data based on url...
         router.request(apiEndpoint) { data, response, error in
             if error != nil {
-                completion(.error(.requestFailed))
+                completion(.failure(.requestFailed))
             }
             
             if let response = response as? HTTPURLResponse {
@@ -126,17 +126,17 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(.error(.invalidData))
+                        completion(.failure(.invalidData))
                         return
                     }
                     do {
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
                         completion(.success(apiResonse))
                     } catch {
-                        completion(.error(.jsonParsingFailure))
+                        completion(.failure(.jsonParsingFailure))
                     }
                 case .failure:
-                    completion(.error(.responseUnsuccessful))
+                    completion(.failure(.responseUnsuccessful))
                 }
             }
             

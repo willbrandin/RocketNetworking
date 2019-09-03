@@ -47,7 +47,7 @@ class RocketNetworkingTests: XCTestCase {
             switch result {
             case .success(let schoolResult):
                 school = schoolResult
-            case .error(let error):
+            case .failure(let error):
                 print(error.localizedDescription)
             }
             expectation.fulfill()
@@ -70,7 +70,7 @@ class RocketNetworkingTests: XCTestCase {
             switch result {
             case .success(let schoolResult):
                 school = schoolResult
-            case .error(let error):
+            case .failure(let error):
                 print(error.localizedDescription)
             }
             expectation.fulfill()
