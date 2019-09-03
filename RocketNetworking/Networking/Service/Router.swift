@@ -53,10 +53,9 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
-    private func configureParameters(bodyParameters: PropertyLoopable?, urlParameters: Parameters?, request: inout URLRequest) throws {
+    private func configureParameters(bodyParameters: Codable?, urlParameters: Parameters?, request: inout URLRequest) throws {
         do {
-            if let bodyParameters = bodyParameters {
-                let parameters = try bodyParameters.allProperties()
+            if let parameters = bodyParameters {
                 try JSONParameterEncoder.encode(urlRequest: &request, with: parameters)
             }
             if let urlParameters = urlParameters {

@@ -8,8 +8,8 @@
 
 import Foundation
 
-internal struct JSONParameterEncoder: ParameterEncoder {
-    internal static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
+internal struct JSONParameterEncoder: RKEncodable {
+    internal static func encode(urlRequest: inout URLRequest, with parameters: Codable) throws {
         do {
             let jsonAsData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
             urlRequest.httpBody = jsonAsData
