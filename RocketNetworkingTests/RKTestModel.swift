@@ -26,7 +26,7 @@ class School: Codable {
     
 }
 
-public struct ContactForm: PropertyLoopable {
+public struct ContactForm: Codable {
     
     //MARK: - Properties
     var name: String?

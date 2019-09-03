@@ -17,5 +17,5 @@ internal protocol ParameterEncoder {
 
 /// JSON Body Data encoding
 internal protocol RKEncodable {
-    static func encode(urlRequest: inout URLRequest, with parameters: Codable) throws
+    static func encode(urlRequest: inout URLRequest, with parameters: Encodable) throws
 }
