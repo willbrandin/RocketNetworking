@@ -83,7 +83,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
                         completion(.success(apiResonse))
                     } catch(let error) {
-                        print(error.localizedDescription)
+                        print(error)
                         completion(.failure(.jsonParsingFailure))
                     }
                     
@@ -132,7 +132,8 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                     do {
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
                         completion(.success(apiResonse))
-                    } catch {
+                    } catch let error {
+                        print(error)
                         completion(.failure(.jsonParsingFailure))
                     }
                 case .failure:
