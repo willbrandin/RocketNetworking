@@ -35,12 +35,12 @@ $ pod install
 
 #### Define Endpoints
 A type that conforms to `EndPointType` defines the http request to be used in the Router.
-All Objects to be encoded **must conform** to `PropertyLoopable`. Conformance allows object properties to be created as a Dictionary. This allows the `HTTPRequest` to encode as Body Data in the form of JSON or as urlParameters.
+All Objects to be encoded **must conform** to `Encodable`.
 
 ```swift
 enum MyAPIEndpoint {
     case getMyEndpoint(id: Int)
-    case submitForm(data: MyPropertyLoopableObject)
+    case submitForm(data: MyEncodable)
 }
 ```
 
@@ -110,7 +110,6 @@ struct NetworkManager {
 Configure in `AppDelegate`
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
     NetworkManger.sharedInstance.setEnvironment(for: .development)
     return true
 }
