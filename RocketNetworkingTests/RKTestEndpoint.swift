@@ -55,4 +55,20 @@ enum RKTestEndpoint: EndPointType {
             return nil
         }
     }
+    
+    func manag() {
+        let manager = RocketNetworkManager<RKTestEndpoint>()
+        manager.setupNetworkLayer(in: .development)
+        
+        let school = ContactForm(name: nil, email: nil, phoneNumber: nil, message: nil)
+        let school2 = ContactForm(name: nil, email: nil, phoneNumber: "", message: nil)
+        
+        let list = [school, school2]
+        
+        manager.request(for: .getSchool(id: "asdf"), [ContactForm]) { (resu) in
+            switch resu {
+            case .success(<#T##[ContactForm]#>)
+            }
+        }
+    }
 }

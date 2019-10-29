@@ -9,12 +9,10 @@
 import Foundation
 
 /**
- 
 */
 public final class RocketNetworkManager<RocketApi: EndPointType> {
     
     // MARK: - Properties
-    
     /**
      Accessible `getter` for the current `NetworkEnvironment`.
      If `rocketEnvironment` is not set, `environment` defaults to `.development`.
@@ -32,7 +30,8 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
         return Router<RocketApi>()
     }
     
-    // MARK: - Init
+    // MARK: - Initializer
+    
     public init() {}
     
     // MARK: - Methods
@@ -70,14 +69,16 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
             
             if let response = response as? HTTPURLResponse {
                 self.buildPrintableResponseDescription(response, data)
-                
                 let result = self.handleNetworkResponse(response)
+                
                 switch result {
                 case .success:
+                    
                     guard let responseData = data else {
                         completion(.failure(.invalidData))
                         return
                     }
+                    
                     do {
                         //Decodes the data
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
@@ -91,7 +92,6 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                     completion(.failure(.responseUnsuccessful))
                 }
             }
-            
         }
     }
     
@@ -121,14 +121,16 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
             
             if let response = response as? HTTPURLResponse {
                 self.buildPrintableResponseDescription(response, data)
-
                 let result = self.handleNetworkResponse(response)
+                
                 switch result {
                 case .success:
+                    
                     guard let responseData = data else {
                         completion(.failure(.invalidData))
                         return
                     }
+                    
                     do {
                         let apiResonse = try JSONDecoder().decode(decodingType, from: responseData)
                         completion(.success(apiResonse))
@@ -136,11 +138,11 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
                         print(error)
                         completion(.failure(.jsonParsingFailure))
                     }
+                    
                 case .failure:
                     completion(.failure(.responseUnsuccessful))
                 }
             }
-            
         }
     }
     

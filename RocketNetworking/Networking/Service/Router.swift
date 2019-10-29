@@ -10,10 +10,15 @@ import Foundation
 
 internal final class Router<EndPoint: EndPointType>: NetworkRouter {
     
+    // MARK: - Properties
+    
     private var task: URLSessionTask?
+    
+    // MARK: - Methods
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
+        
         do {
             let request = try buildRequest(from: route)
             buildPrintableRequestDescription(request)
@@ -23,6 +28,7 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
         } catch  {
             completion(nil, nil, error)
         }
+        
         self.task?.resume()
     }
     
@@ -30,10 +36,13 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
         self.task?.cancel()
     }
     
+    // MARK: - Private Methods
+    
     private func buildRequest(from route: EndPoint) throws -> URLRequest {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         request.httpMethod = route.httpMethod.rawValue
+        
         do {
             switch route.task {
             case .request:
@@ -66,23 +75,26 @@ internal final class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
-    private func additionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest){
-        guard let headers = additionalHeaders else { return }
+    private func additionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
+        
+        guard let headers = additionalHeaders else {
+            return
+        }
+        
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
     }
     
-    
     private func buildPrintableRequestDescription(_ request: URLRequest) {
         let routeURL = request.url?.absoluteString ?? ""
         let routeHeaders = request.allHTTPHeaderFields ?? [:]
         var routeBodyData = ""
+        
         if let bodyData = request.httpBody {
             routeBodyData = String(data: bodyData, encoding: String.Encoding.utf8) ?? ""
         }
         
         print("\n======================= Start of Service Request call data ==================== \n=======================REQUEST======================= \n URL:\n \(routeURL)\nHEADER:\n\(routeHeaders)\n Body:\n\(routeBodyData)\n\n======================= End of  Service Request call data ================= \n\n\n")
     }
-    
 }

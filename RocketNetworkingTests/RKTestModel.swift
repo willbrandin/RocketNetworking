@@ -16,14 +16,6 @@ class School: Codable {
     let schoolId: String?
     let schoolCity: String?
     let schoolState: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case schoolCity = "city"
-        case schoolState = "state"
-        case schoolName = "name"
-        case schoolId = "school"
-    }
-    
 }
 
 public struct ContactForm: Codable {

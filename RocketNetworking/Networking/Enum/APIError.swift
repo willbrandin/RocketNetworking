@@ -24,5 +24,4 @@ public enum APIError: Error {
         case .jsonConversionFailure: return "JSON Conversion Failure"
         }
     }
-    
 }
