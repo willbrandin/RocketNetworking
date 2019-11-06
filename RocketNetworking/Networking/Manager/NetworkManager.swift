@@ -112,6 +112,7 @@ public final class RocketNetworkManager<RocketApi: EndPointType> {
          - decodingType: The type that is decoded from the response.
          - completion: RKResult.success is the decodingType passed as an argument.
      */
+    @available(*, deprecated, renamed: "request")
     public func requestWithListResponse<T: Codable>(for apiEndpoint: RocketApi, _ decodingType: [T].Type, completion: @escaping (Result<[T], APIError>) -> Void) {
         //gets data based on url...
         router.request(apiEndpoint) { data, response, error in
