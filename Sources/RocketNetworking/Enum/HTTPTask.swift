@@ -8,12 +8,15 @@
 
 import Foundation
 
+
 public typealias HTTPHeaders = [String: String]
 
 public enum HTTPTask {
     case request
-    case requestParameters(bodyParameters: Codable?, urlParameters: Parameters?)
+    case requestParameters(bodyParameters: Codable?, urlParameters: [Parameter]?)
+    case requestBodyData(bodyData: Data?, urlParameters: [Parameter]?)
     case requestParametersAndHeaders(bodyParameters: Codable?,
-        urlParameters: Parameters?,
+        urlParameters: [Parameter]?,
         additionalHeaders: HTTPHeaders?)
 }
+

@@ -1,4 +1,3 @@
-
 # Rocket Networking 🚀
 Lightweight Protocol-Oriented Networking layer. Start developing quickly by defining Endpoints for your API.
 
