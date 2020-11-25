@@ -44,8 +44,7 @@ enum MyAPIEndpoint {
 }
 ```
 
-<details>
-<summary>Conform to EndpointType</summary>
+Conform to EndpointType
 
 ```swift
 extension MyAPIEndpoint: EndPointType {
@@ -94,7 +93,6 @@ extension MyAPIEndpoint: EndPointType {
   }
 }
 ```
-</details>
 
 #### Instance of RocketNetworkManager
 
