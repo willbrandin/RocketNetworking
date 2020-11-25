@@ -9,16 +9,16 @@
 Pod::Spec.new do |s|
 
   s.name         = "RocketNetworking"
-  s.version      = "0.0.9"
+  s.version      = "1.0.0"
   s.summary      = "Lightweight Networking in pure swift"
   s.description  = "Lightweight Protocol oriented networking layer written in swift."
-  s.homepage     = "https://www.universitylaundry.com"
+  s.homepage     = "https://github.com/willbrandin/RocketNetworking"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "willbrandin" => "will@tidelaundry.com" }
   s.platform     = :ios
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "12.0"
   s.source       = { :git => "https://github.com/willbrandin/RocketNetworking.git", :tag => "#{s.version}" }
-  s.source_files = "RocketNetworking/**/*.{swift}"
+  s.source_files = "Sources/**/*.{swift}"
 
   s.swift_version = "4.2"
 

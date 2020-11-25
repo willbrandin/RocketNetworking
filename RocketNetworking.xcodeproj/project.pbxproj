@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D23FE99321FCD91800EC0EB5 /* RocketNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE99221FCD91800EC0EB5 /* RocketNetworkingTests.swift */; };
 		D23FE99521FCD91800EC0EB5 /* RocketNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D23FE98721FCD91800EC0EB5 /* RocketNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D23FE9AE21FCD94F00EC0EB5 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A021FCD94F00EC0EB5 /* ParameterEncoding.swift */; };
 		D23FE9AF21FCD94F00EC0EB5 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A121FCD94F00EC0EB5 /* URLParameterEncoder.swift */; };
@@ -18,27 +17,25 @@
 		D23FE9B621FCD94F00EC0EB5 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AB21FCD94F00EC0EB5 /* HTTPTask.swift */; };
 		D23FE9B721FCD94F00EC0EB5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AC21FCD94F00EC0EB5 /* HTTPMethod.swift */; };
 		D23FE9B821FCD94F00EC0EB5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AD21FCD94F00EC0EB5 /* Router.swift */; };
-		D23FE9BA21FCDAC600EC0EB5 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9B921FCDAC600EC0EB5 /* NetworkEnvironment.swift */; };
 		D23FE9BD21FCEDD700EC0EB5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */; };
-		D23FE9C121FCEE7E00EC0EB5 /* NetworkResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */; };
 		D25BD81A21FE14FD005217B9 /* RocketNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23FE98421FCD91800EC0EB5 /* RocketNetworking.framework */; };
-		D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */; };
-		D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274428E21FD2EE50044AB62 /* RKTestModel.swift */; };
 		D2A7DCC62318714700150A98 /* RocketWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A7DCC42318714700150A98 /* RocketWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2A7DCE12318724A00150A98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A521FCD94F00EC0EB5 /* NetworkManager.swift */; };
 		D2A7DCE22318724D00150A98 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A821FCD94F00EC0EB5 /* Endpoint.swift */; };
 		D2A7DCE42318724D00150A98 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A021FCD94F00EC0EB5 /* ParameterEncoding.swift */; };
 		D2A7DCE52318724D00150A98 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AA21FCD94F00EC0EB5 /* NetworkRouter.swift */; };
 		D2A7DCE62318725000150A98 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */; };
-		D2A7DCE72318725000150A98 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9B921FCDAC600EC0EB5 /* NetworkEnvironment.swift */; };
 		D2A7DCE82318725000150A98 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AB21FCD94F00EC0EB5 /* HTTPTask.swift */; };
 		D2A7DCE92318725000150A98 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AC21FCD94F00EC0EB5 /* HTTPMethod.swift */; };
-		D2A7DCEA2318725000150A98 /* NetworkResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */; };
 		D2A7DCED2318725500150A98 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A121FCD94F00EC0EB5 /* URLParameterEncoder.swift */; };
 		D2A7DCEE2318725500150A98 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9A221FCD94F00EC0EB5 /* JSONParameterEncoder.swift */; };
 		D2A7DCEF2318725500150A98 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FE9AD21FCD94F00EC0EB5 /* Router.swift */; };
 		D2C2C95D231EA16000F3CB8E /* Encodable+ToJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C2C95C231EA16000F3CB8E /* Encodable+ToJsonData.swift */; };
 		D2C2C95E231EAA4D00F3CB8E /* Encodable+ToJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C2C95C231EA16000F3CB8E /* Encodable+ToJsonData.swift */; };
+		D2FAE299256E09C2000547DE /* Data+JSONPrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE298256E09C2000547DE /* Data+JSONPrettyPrint.swift */; };
+		D2FAE2A2256E09F5000547DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE2A1256E09F5000547DE /* Constants.swift */; };
+		D2FAE2A8256E0A8B000547DE /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE2A7256E0A8B000547DE /* Parameter.swift */; };
+		D2FAE2B1256E0AB2000547DE /* RKRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE2B0256E0AB2000547DE /* RKRequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +53,6 @@
 		D23FE98721FCD91800EC0EB5 /* RocketNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketNetworking.h; sourceTree = "<group>"; };
 		D23FE98821FCD91800EC0EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D23FE98D21FCD91800EC0EB5 /* RocketNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D23FE99221FCD91800EC0EB5 /* RocketNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketNetworkingTests.swift; sourceTree = "<group>"; };
 		D23FE99421FCD91800EC0EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D23FE9A021FCD94F00EC0EB5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		D23FE9A121FCD94F00EC0EB5 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
@@ -67,15 +63,15 @@
 		D23FE9AB21FCD94F00EC0EB5 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		D23FE9AC21FCD94F00EC0EB5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D23FE9AD21FCD94F00EC0EB5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		D23FE9B921FCDAC600EC0EB5 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseResult.swift; sourceTree = "<group>"; };
-		D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTestEndpoint.swift; sourceTree = "<group>"; };
-		D274428E21FD2EE50044AB62 /* RKTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKTestModel.swift; sourceTree = "<group>"; };
 		D2A7DCC22318714700150A98 /* RocketWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A7DCC42318714700150A98 /* RocketWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RocketWatch.h; sourceTree = "<group>"; };
 		D2A7DCC52318714700150A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C2C95C231EA16000F3CB8E /* Encodable+ToJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToJsonData.swift"; sourceTree = "<group>"; };
+		D2FAE298256E09C2000547DE /* Data+JSONPrettyPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONPrettyPrint.swift"; sourceTree = "<group>"; };
+		D2FAE2A1256E09F5000547DE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D2FAE2A7256E0A8B000547DE /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		D2FAE2B0256E0AB2000547DE /* RKRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKRequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +103,8 @@
 		D23FE97A21FCD91800EC0EB5 = {
 			isa = PBXGroup;
 			children = (
-				D23FE98621FCD91800EC0EB5 /* RocketNetworking */,
-				D23FE99121FCD91800EC0EB5 /* RocketNetworkingTests */,
+				D2FAE2CA256E0CF0000547DE /* Sources */,
+				D2FAE2D3256E0E23000547DE /* Tests */,
 				D2A7DCC32318714700150A98 /* RocketWatch */,
 				D23FE98521FCD91800EC0EB5 /* Products */,
 			);
@@ -128,7 +124,14 @@
 		D23FE98621FCD91800EC0EB5 /* RocketNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				D23FE99E21FCD94F00EC0EB5 /* Networking */,
+				D2FAE2AF256E0A91000547DE /* Models */,
+				D2FAE2A0256E09E8000547DE /* Utility */,
+				D2FAE297256E0949000547DE /* Builder */,
+				D274428B21FD2AE50044AB62 /* Manager */,
+				D274428A21FD2ADA0044AB62 /* Protocol */,
+				D274428921FD2AB90044AB62 /* Enum */,
+				D23FE9C421FCEECE00EC0EB5 /* Extension */,
+				D23FE9A921FCD94F00EC0EB5 /* Service */,
 				D23FE98721FCD91800EC0EB5 /* RocketNetworking.h */,
 				D23FE98821FCD91800EC0EB5 /* Info.plist */,
 			);
@@ -138,25 +141,9 @@
 		D23FE99121FCD91800EC0EB5 /* RocketNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D23FE99221FCD91800EC0EB5 /* RocketNetworkingTests.swift */,
 				D23FE99421FCD91800EC0EB5 /* Info.plist */,
-				D274428C21FD2DB80044AB62 /* RKTestEndpoint.swift */,
-				D274428E21FD2EE50044AB62 /* RKTestModel.swift */,
 			);
 			path = RocketNetworkingTests;
-			sourceTree = "<group>";
-		};
-		D23FE99E21FCD94F00EC0EB5 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				D274428B21FD2AE50044AB62 /* Manager */,
-				D274428A21FD2ADA0044AB62 /* Protocol */,
-				D274428921FD2AB90044AB62 /* Enum */,
-				D23FE9C421FCEECE00EC0EB5 /* Extension */,
-				D23FE99F21FCD94F00EC0EB5 /* Encoding */,
-				D23FE9A921FCD94F00EC0EB5 /* Service */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		D23FE99F21FCD94F00EC0EB5 /* Encoding */ = {
@@ -171,6 +158,7 @@
 		D23FE9A921FCD94F00EC0EB5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D23FE9A521FCD94F00EC0EB5 /* NetworkManager.swift */,
 				D23FE9AD21FCD94F00EC0EB5 /* Router.swift */,
 			);
 			path = Service;
@@ -180,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C2C95C231EA16000F3CB8E /* Encodable+ToJsonData.swift */,
+				D2FAE298256E09C2000547DE /* Data+JSONPrettyPrint.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -188,10 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				D23FE9BC21FCEDD700EC0EB5 /* APIError.swift */,
-				D23FE9B921FCDAC600EC0EB5 /* NetworkEnvironment.swift */,
 				D23FE9AB21FCD94F00EC0EB5 /* HTTPTask.swift */,
 				D23FE9AC21FCD94F00EC0EB5 /* HTTPMethod.swift */,
-				D23FE9C021FCEE7E00EC0EB5 /* NetworkResponseResult.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -209,7 +196,6 @@
 		D274428B21FD2AE50044AB62 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				D23FE9A521FCD94F00EC0EB5 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -221,6 +207,47 @@
 				D2A7DCC52318714700150A98 /* Info.plist */,
 			);
 			path = RocketWatch;
+			sourceTree = "<group>";
+		};
+		D2FAE297256E0949000547DE /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D23FE99F21FCD94F00EC0EB5 /* Encoding */,
+				D2FAE2B0256E0AB2000547DE /* RKRequestBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		D2FAE2A0256E09E8000547DE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D2FAE2A1256E09F5000547DE /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		D2FAE2AF256E0A91000547DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2FAE2A7256E0A8B000547DE /* Parameter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2FAE2CA256E0CF0000547DE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D23FE98621FCD91800EC0EB5 /* RocketNetworking */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D2FAE2D3256E0E23000547DE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D23FE99121FCD91800EC0EB5 /* RocketNetworkingTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,14 +400,16 @@
 				D23FE9B521FCD94F00EC0EB5 /* NetworkRouter.swift in Sources */,
 				D2C2C95D231EA16000F3CB8E /* Encodable+ToJsonData.swift in Sources */,
 				D23FE9B621FCD94F00EC0EB5 /* HTTPTask.swift in Sources */,
-				D23FE9BA21FCDAC600EC0EB5 /* NetworkEnvironment.swift in Sources */,
+				D2FAE2A2256E09F5000547DE /* Constants.swift in Sources */,
+				D2FAE2B1256E0AB2000547DE /* RKRequestBuilder.swift in Sources */,
 				D23FE9BD21FCEDD700EC0EB5 /* APIError.swift in Sources */,
-				D23FE9C121FCEE7E00EC0EB5 /* NetworkResponseResult.swift in Sources */,
 				D23FE9AF21FCD94F00EC0EB5 /* URLParameterEncoder.swift in Sources */,
 				D23FE9B221FCD94F00EC0EB5 /* NetworkManager.swift in Sources */,
+				D2FAE2A8256E0A8B000547DE /* Parameter.swift in Sources */,
 				D23FE9AE21FCD94F00EC0EB5 /* ParameterEncoding.swift in Sources */,
 				D23FE9B721FCD94F00EC0EB5 /* HTTPMethod.swift in Sources */,
 				D23FE9B021FCD94F00EC0EB5 /* JSONParameterEncoder.swift in Sources */,
+				D2FAE299256E09C2000547DE /* Data+JSONPrettyPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +417,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D274428F21FD2EE50044AB62 /* RKTestModel.swift in Sources */,
-				D23FE99321FCD91800EC0EB5 /* RocketNetworkingTests.swift in Sources */,
-				D274428D21FD2DB80044AB62 /* RKTestEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,12 +426,10 @@
 			files = (
 				D2A7DCE22318724D00150A98 /* Endpoint.swift in Sources */,
 				D2A7DCE52318724D00150A98 /* NetworkRouter.swift in Sources */,
-				D2A7DCE72318725000150A98 /* NetworkEnvironment.swift in Sources */,
 				D2C2C95E231EAA4D00F3CB8E /* Encodable+ToJsonData.swift in Sources */,
 				D2A7DCE82318725000150A98 /* HTTPTask.swift in Sources */,
 				D2A7DCE92318725000150A98 /* HTTPMethod.swift in Sources */,
 				D2A7DCEF2318725500150A98 /* Router.swift in Sources */,
-				D2A7DCEA2318725000150A98 /* NetworkResponseResult.swift in Sources */,
 				D2A7DCED2318725500150A98 /* URLParameterEncoder.swift in Sources */,
 				D2A7DCE42318724D00150A98 /* ParameterEncoding.swift in Sources */,
 				D2A7DCE12318724A00150A98 /* NetworkManager.swift in Sources */,
@@ -557,7 +581,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RocketNetworking/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/RocketNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +607,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RocketNetworking/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/RocketNetworking/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +629,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
-				INFOPLIST_FILE = RocketNetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/RocketNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,7 +648,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
-				INFOPLIST_FILE = RocketNetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/RocketNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,15 +9,12 @@
 import Foundation
 
 internal struct JSONParameterEncoder: RKEncodable {
-    internal static func encode(urlRequest: inout URLRequest, with parameters: Encodable) throws {
+    internal static func encode(urlRequest: inout URLRequest, with parameters: Data) {
+        urlRequest.httpBody = parameters
         
-        guard let data = parameters.toJSONData() else {
-            throw APIError.jsonConversionFailure
-        }
-        
-        urlRequest.httpBody = data
         if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
             urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
     }
 }
+
